@@ -11,7 +11,7 @@ if variable_name == "":
 elif variable_name[0].isdigit():
     is_valid = False
 
-elif "__" in variable_name:
+elif variable_name.strip("_") == "" and len(variable_name) > 1:
     is_valid = False
 
 elif variable_name in keyword.kwlist:
